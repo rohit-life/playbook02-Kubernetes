@@ -1,6 +1,6 @@
-#Generating Pod Manifests via CLI
+Generating Pod Manifests via CLI
 
-##1. Create a Pod from Nginx Image
+1. Create a Pod from Nginx Image
 
 Syntax:  kubectl run [NAME-OF-POD] --image=[IMAGE=NAME]
 
