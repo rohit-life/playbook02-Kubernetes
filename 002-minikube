@@ -1,4 +1,4 @@
-Installation and configuration of multinode minikube instance. Configure control plane and worker node.
+##Installation and configuration of multinode minikube instance. Configure control plane and worker node.
 
 1. Start cluster:
    minikube start --nodes 2 -p multinode --driver=docker
@@ -11,3 +11,22 @@ Installation and configuration of multinode minikube instance. Configure control
 
 4. Get nodes:
    kubectl get nodes
+============================================================================================================
+Enabling Dashboard in minikube
+ 
+1. Run the command: 
+   minikube dashboard
+
+2. Access minikube dashboard from outside (remote):
+   kubectl proxy --address='0.0.0.0' --disable-filter=true
+
+now copy ip and replace with 127.0.0.1 abd port with 8001
+example: http://192.168.0.106:8001/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/workloads?namespace=default
+
+3. Remove emoji from minikube output:
+   MINIKUBE_IN_STYLE=0 minikube dashboard 
+or to make it permanent us:
+export MINIKUBE_IN_STYLE=false
+
+
+
