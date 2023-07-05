@@ -1,4 +1,13 @@
-minikube start --node 2 -p multinode --driver=docker
+Installation and configuration of multinode minikube instance. Configure control plane and worker node.
 
-minikube status -p multinode
+1. Start cluster:
+   minikube start --nodes 2 -p multinode --driver=docker
 
+2. Set profile so that you don't have to profile node everytime:
+   minikube profile multinode
+
+3. Check status of the node:
+   minikube status -p multinode
+
+4. Get nodes:
+   kubectl get nodes
