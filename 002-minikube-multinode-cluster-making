@@ -1,0 +1,4 @@
+minikube start --node 2 -p multinode --driver=docker
+
+minikube status -p multinode
+
