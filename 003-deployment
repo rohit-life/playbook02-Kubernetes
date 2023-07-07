@@ -1,0 +1,4 @@
+1. make a new deployment file using command
+   kubectl create deployment my-deployment --image=nginx --dry-run=client -o yaml
+
+2. 
